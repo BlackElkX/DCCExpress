@@ -19,8 +19,10 @@ WORKDIR /build/DCCExpress
 
 # Install, Build & Test
 RUN npm install
+#WORKDIR /build/DCCExpress/dist
 
 # Execute client as non-root user
 USER ${USER}
 
 ENTRYPOINT [ "npm", "start" ]
+#ENTRYPOINT [ "node", "server/js/server/src/index.js" ]
